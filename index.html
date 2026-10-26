@@ -113,6 +113,108 @@
 
   </div>
 
+  <section class="git-panel" id="git">
+
+    <div class="section-heading">
+      <span class="git-symbol">⑂</span>
+      <h2>Результати роботи з Git</h2>
+    </div>
+  
+    <p class="section-description">
+      Історія комітів, гілки та результати
+      виконання Git-команд.
+    </p>
+  
+    <div class="git-tabs">
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-status" checked>
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-branch">
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-log">
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-merge">
+  
+      <div class="tab-labels">
+        <label for="tab-status">Git Status</label>
+        <label for="tab-branch">Git Branch</label>
+        <label for="tab-log">Git Log</label>
+        <label for="tab-merge">Merge History</label>
+      </div>
+  
+      <div class="terminal">
+  
+        <div class="terminal-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+  
+          <span class="terminal-title">
+            git-terminal
+          </span>
+        </div>
+  
+        <div class="terminal-body">
+  
+          <pre class="tab-content status"><code>$ git status
+
+            Текущая ветка: main
+            Ваша ветка опережает «origin/main» на 2 коммита.
+              (используйте «git push», чтобы опубликовать ваши локальные коммиты)
+            
+            нечего коммитить, нет изменений в рабочем каталоге</code></pre>
+  
+          <pre class="tab-content branch"><code>$ git branch -a
+
+            feature/about
+          * main
+            remotes/origin/HEAD -> origin/main
+            remotes/origin/feature/about
+            remotes/origin/main</code></pre>
+  
+          <pre class="tab-content log"><code>$ git log --oneline
+
+            87d7cb5 (HEAD -> main, feature/about) Change page heading
+            20fb9bd Update main heading
+            7223e63 (origin/main, origin/HEAD) Update hobbies list
+            569aab6 Add hobbies section
+            e493ff1 Add initial website
+            6df4134 remove
+            9a754e3 new style
+            f3f94d3 Add Git results section
+            c39e85e (origin/feature/about) resolve conflict
+            f6ddcd2 Change page heading
+            f43c127 Update main heading
+            1186284 Update hobbies list
+            9976424 Add hobbies section
+            f50e5ba Add initial website
+            8fe2683 Initial commit</code></pre>
+  
+          <pre class="tab-content merge"><code>$ git log --merges
+
+            commit c39e85ee914a477053cc293959ec18b0a8003c21 (origin/feature/about)
+            Merge: f6ddcd2 f43c127
+            Author: VitaliiBohdaniuk <v.bogdanuk@gmail.com>
+            Date:   Fri Oct 23 14:03:11 2026 +0300
+            
+                resolve conflict</code></pre>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
   <footer class="footer">
     <p>Made with Git & GitHub Pages</p>
   </footer>
