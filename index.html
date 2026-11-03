@@ -104,7 +104,95 @@
     </section>
 
   </div>
+  <section class="git-panel" id="git">
 
+    <div class="section-heading">
+      <span class="git-symbol">⑂</span>
+      <h2>Результати роботи з Git</h2>
+    </div>
+  
+    <p class="section-description">
+      Історія комітів, гілки та результати
+      виконання Git-команд.
+    </p>
+  
+    <div class="git-tabs">
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-status" checked>
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-branch">
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-log">
+  
+      <input type="radio"
+             name="git-tab"
+             id="tab-merge">
+  
+      <div class="tab-labels">
+        <label for="tab-status">Git Status</label>
+        <label for="tab-branch">Git Branch</label>
+        <label for="tab-log">Git Log</label>
+        <label for="tab-merge">Merge History</label>
+      </div>
+  
+      <div class="terminal">
+  
+        <div class="terminal-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+  
+          <span class="terminal-title">
+            git-terminal
+          </span>
+        </div>
+  
+        <div class="terminal-body">
+  
+          <pre class="tab-content status"><code>$ git status
+
+            Текущая ветка: main
+            нечего коммитить, нет изменений в рабочем каталоге</code></pre>
+  
+          <pre class="tab-content branch"><code>$ git branch -a
+
+            feature/about
+          * main
+            remotes/origin/feature/about
+            remotes/origin/main</code></pre>
+  
+          <pre class="tab-content log"><code>$ git log --oneline
+
+            a665b3f (HEAD -> main, origin/main, origin/feature/about, feature/about) merge with main
+            f9f8727 Change page heading
+            045f326 Update main heading
+            1013918 Update hobbies list
+            0e749d4 Add hobbies section
+            fdb7a8c Add initial website
+            d4c671c first commit</code></pre>
+  
+          <pre class="tab-content merge"><code>$ git log --merges
+
+            commit a665b3f0373c7a6493345624e37425e17ee70ab9 (HEAD -> main, origin/main, origin/feature/about, feature/about)
+            Merge: f9f8727 045f326
+            Author: VitaliiBohdaniuk <v.bogdanuk@gmail.com>
+            Date:   Tue Nov 3 10:30:53 2026 +0200
+            
+                merge with main</code></pre>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>
   <footer class="footer">
     <p>Made with Git & GitHub Pages</p>
   </footer>
